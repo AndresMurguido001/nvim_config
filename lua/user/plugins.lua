@@ -47,7 +47,7 @@ return packer.startup(function(use)
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
   use "numToStr/Comment.nvim" -- Easily comment stuff
-  use "akinsho/bufferline.nvim"
+  use "akinsho/bufferline.nvim" -- Shows tabs for buffers
   use "moll/vim-bbye"
 
   -- Nvim tree
@@ -85,12 +85,14 @@ return packer.startup(function(use)
   }
   use "nvim-treesitter/playground"
   use 'JoosepAlviste/nvim-ts-context-commentstring'
-  -- Custom plugins
-  use "~/local_plugins/find_replace"
 
   -- Git
   use "lewis6991/gitsigns.nvim"
+  -- Startup Screen
+  use "goolord/alpha-nvim"
 
+  -- Custom plugin
+  use "AndresMurguido001/crispy-barnacle"
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then

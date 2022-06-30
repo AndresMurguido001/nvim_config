@@ -35,6 +35,9 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
+-- Close buffers
+keymap("n", "<leader>q", ":Bdelete<CR>", opts)
+
 -- Move text up and down
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
@@ -69,11 +72,7 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- Telescope keymaps --
 keymap("n", "<leader>f", ":Telescope find_files<CR>", opts)
-keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
--- Comment - Maybe I want to try these later?
---keymap("n", "<leader>/", "<cmd>lua require('Comment').toggle()<CR>", opts)
---keymap("v", "<leader>/", ":lua require(\"Comment.api\").gc(vim.fn.visualmode())<cr>", opts)
 
 -- Comment
 keymap("n", "<leader>/", "<cmd>lua require('Comment').toggle()<CR>", opts)
