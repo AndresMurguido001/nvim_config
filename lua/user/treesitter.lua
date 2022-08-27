@@ -5,7 +5,7 @@ end
 
 configs.setup {
   ensure_installed = { "lua" },
-  sync_install = false, 
+  sync_install = false,
   ignore_install = { "" }, -- List of parsers to ignore installing
   autopairs = {
     enable = true,

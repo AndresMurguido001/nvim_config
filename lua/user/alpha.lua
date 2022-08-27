@@ -30,6 +30,18 @@ dashboard.section.footer.opts.hl = "Type"
 dashboard.section.header.opts.hl = "Include"
 dashboard.section.buttons.opts.hl = "Keyword"
 
+dashboard.section.footer.val = function ()
+  local date_gen = io.popen('echo "$(date +%d)/$(date +%m)/$(date +%y)($(date +%a))$(date +%X)" | tr -d "\n"')
+
+  if not date_gen then
+    return
+  end
+
+  local date = date_gen:read("*a")
+  date_gen:close()
+  return date
+end
+
 --[[ dashboard.opts.opts.noautocmd = true ]]
 vim.cmd([[autocmd User AlphaReady echo 'ready']])
 alpha.setup(dashboard.config)

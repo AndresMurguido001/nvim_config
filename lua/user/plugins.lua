@@ -90,10 +90,14 @@ return packer.startup(function(use)
   use "lewis6991/gitsigns.nvim"
   -- Startup Screen
   use "goolord/alpha-nvim"
+  -- Lualine!
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
 
-  -- Custom plugin
---  use "~/Projects/ascii_art"
-  -- use "AndresMurguido001/crispy-barnacle"
+  use "akinsho/toggleterm.nvim"
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
